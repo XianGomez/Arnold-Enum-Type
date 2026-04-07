@@ -25,4 +25,8 @@ public enum Planeta {
     public double getRadio() {
         return radio;
     }
+
+    public static Planeta[] getPlanetasTerrestres() {
+        return new Planeta[] {MERCURY, VENUS, EARTH, MARS};
+    }
 }
