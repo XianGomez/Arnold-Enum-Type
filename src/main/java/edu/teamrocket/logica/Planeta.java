@@ -44,4 +44,8 @@ public enum Planeta {
     public static Planeta[] getGigantesGaseosos() {
         return new Planeta[] {JUPITER, SATURN, URANUS, NEPTUNE};
     }
+
+    public static Planeta[] getPlanetasHelados() {
+        return new Planeta[] {URANUS, NEPTUNE};
+    }
 }
