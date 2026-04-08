@@ -53,7 +53,7 @@ public class ArnoldEnumTypeTest {
 	@Test
 	public void PlanetaNamesIteratorTest() {
 		for (Planeta planeta : Planeta.values()) {
-			assertThat(planeta.name()).isIn(planetas);
+			assertThat(planeta.name()).isIn((Object[])planetas);
 		}
 	}
 
@@ -78,7 +78,7 @@ public class ArnoldEnumTypeTest {
 		assertThat(planetas).doesNotContainNull();
 
 		for (Planeta planeta : Planeta.getPlanetasTerrestres()) {
-			assertThat(planeta.name()).isIn(planetasTerrestres);
+			assertThat(planeta.name()).isIn((Object[])planetasTerrestres);
 		}
 	}
 
@@ -98,7 +98,29 @@ public class ArnoldEnumTypeTest {
 		assertThat(planetas).doesNotContainNull();
 
 		for (Planeta planeta : Planeta.getGigantesGaseosos()) {
-			assertThat(planeta.name()).isIn(gigantesGaseosos);
+			assertThat(planeta.name()).isIn((Object[]) gigantesGaseosos);
 		}
 	}
+
+	@Test
+	public void ArrayPlanetasHeladosTest() {
+
+		String[] planetasHelados = new String[2];
+		int planetasIncluidos = 0;
+
+		byte index = 0;
+		for (int i = Planeta.URANUS.ordinal(); i <= Planeta.NEPTUNE.ordinal(); i++) {
+			planetasHelados[index] = Planeta.values()[i].name();
+			planetasIncluidos += 1;
+			index += 1;
+		}
+		assertThat(planetasIncluidos).isEqualTo(2);
+		assertThat(planetasHelados).doesNotContainNull();
+
+		for (Planeta planeta : Planeta.getPlanetasHelados()) {
+			assertThat(planeta.name()).isIn((Object[])planetasHelados);
+		}
+	}
+
+	
 }
