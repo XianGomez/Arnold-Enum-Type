@@ -6,7 +6,12 @@ public class ArnoldMain {
 	
 	public static void main(String[] args) {
         
-        double peso = 1.0; // kg
+        if (args.length == 0) {
+            System.out.println("Uso: java ArnoldMain <peso_en_kg>");
+            return;
+        }
+
+        double peso = Double.parseDouble(args[0]);
         
         for(Planeta planeta : Planeta.values()){
             System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
