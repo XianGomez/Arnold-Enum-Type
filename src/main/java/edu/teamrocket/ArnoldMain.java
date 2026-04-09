@@ -34,6 +34,11 @@ public class ArnoldMain {
             for(Planeta planeta: Planeta.getGigantesGaseosos()){
                 System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
             }
+
+            System.out.println("\nYour weight only on the frozen planets: ");
+            for(Planeta planeta : Planeta.getPlanetasHelados()){
+                System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
+            }
         }
         
         
