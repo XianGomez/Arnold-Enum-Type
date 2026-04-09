@@ -1,16 +1,19 @@
-# Arnold-Enum-Type 🕶️
+# Arnold-Enum-Type 
 
 ---
 
-## 🚀 Características
+## Características
 
-* **Implementación sencilla:** Solo necesitas implementar una interfaz.
-* **Código limpio:** Sin dependencias externas.
-* **Humor incorporado:** Ideal para logs personalizados o mensajes de error con actitud.
+* **Lectura por consola de parámetros de peso y planeta**
 
 ---
 
-## 🛠️ Instalación
+## Uso por consola
+
+Para usarlo por consola, terminal Windows, primero hay que situarse en la ruta `\Arnold-Enum-Type\src\main\java`, despues compilar con `javac edu/teamrocket/ArnoldMain.java edu/teamrocket/logica/Planeta.java`, y ejecutar con `java edu.teamrocket.ArnoldMain <peso> <planeta>`
+
+
+## Instalación
 
 Para usarlo en tu proyecto, clona este repositorio e importa la interfaz `ArnoldEnum`:
 
